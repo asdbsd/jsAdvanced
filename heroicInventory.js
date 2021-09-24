@@ -5,11 +5,13 @@ function heroicInventory(wariors) {
         level = Number(level);
         items = items ? items.split(', ') : []
 
-        result.push({
-            "name": name,
-            "level": level,
-            "items": items
-        });
+        result.push(
+            {
+                "name": name,
+                "level": level,
+                "items": items
+            }
+        );
     }
 
     return JSON.stringify(result);
