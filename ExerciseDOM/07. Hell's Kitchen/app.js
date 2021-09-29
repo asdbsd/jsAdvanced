@@ -21,13 +21,6 @@ function solve() {
       document.querySelectorAll('#outputs div p')[0].textContent = restaurantInfo;
       document.querySelectorAll('#outputs div p')[1].textContent = workersInfo;
 
-      function avgPrice() {
-         let salaries = Object.values(this.employees);
-         let totalSalaries = salaries.reduce((avg, s) => avg+= s);
-         let avgPrice = totalSalaries / salaries.length;
-
-         return avgPrice.toFixed(2);
-      }
       
       function reduceCatalog(catalog, r) {
          let [restaurantName, employees] = r.split(' - ');
@@ -46,6 +39,14 @@ function solve() {
          return catalog;
              
        }
+
+       function avgPrice() {
+         let salaries = Object.values(this.employees);
+         let totalSalaries = salaries.reduce((avg, s) => avg+= s);
+         let avgPrice = totalSalaries / salaries.length;
+
+         return avgPrice.toFixed(2);
+      }
    }
 }
 
