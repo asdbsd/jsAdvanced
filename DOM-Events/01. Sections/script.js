@@ -9,14 +9,13 @@ function create(words) {
       para.textContent = word;
       para.style.display = 'none';
       div.appendChild(para);
-   
-   
-      div.addEventListener('click', reveal);
+      div.addEventListener('click', reveal.bind(para));
+
       content.appendChild(div);
    }
 
-   function reveal(e) {
-      e.currentTarget.children[0].style.display = '';
+   function reveal() {
+      this.style.display = '';
    }
 
 }
