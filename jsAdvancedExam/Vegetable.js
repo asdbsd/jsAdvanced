@@ -82,11 +82,10 @@ class VegetableStore {
 
 }
 
-const VegetableStore = result;
-let vegStore = new VegetableStore('Jerrie Munro', '1463 Pette Kyosheta, Sofia');
 
-assert.equal(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8", "Celery 5.5 2.2", "Celery 0.5 2.5"]), "Successfully added Okra, Beans, Celery");
-
-assert.equal(vegStore.buyingVegetables(["Okra 1"]), "Great choice! You must pay the following amount $3.50.");
-expect(()=>vegStore.buyingVegetables(["Banana 1","Okra 2"])).to.throw("Banana is not available in the store, your current bill is $0.00.");
-
+let vegStore = new VegetableStore("Jerrie Munro", "1463 Pette Kyosheta, Sofia");
+console.log(vegStore.loadingVegetables(["Okra 2.5 3.5", "Beans 10 2.8", "Celery 5.5 2.2", "Celery 0.5 2.5"]));
+console.log(vegStore.rottingVegetable("Okra", 1));
+console.log(vegStore.rottingVegetable("Okra", 2.5));
+console.log(vegStore.buyingVegetables(["Beans 8", "Celery 1.5"]));
+console.log(vegStore.revision());

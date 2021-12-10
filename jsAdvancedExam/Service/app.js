@@ -1,16 +1,13 @@
 window.addEventListener('load', solve);
 
 function solve() {
-    const[ receivedSection, completedSection ] = Array.from(document.querySelectorAll('#wrapper section'));
+    const [ receivedSection, completedSection ] = Array.from(document.querySelectorAll('#wrapper section'));
     const repairForm = document.querySelector('div#right form');
     const sendFormBtn = document.querySelector('div#right form button');
     const [ clearBtn ] = [...Array.from(completedSection.getElementsByClassName('clear-btn'))];
     clearBtn.addEventListener('click', onClear);
 
-
     sendFormBtn.addEventListener('click', onSend);
-
-
 
     function onSend(e) {
         e.preventDefault();
